@@ -1,24 +1,69 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+//Custom Component
+import CustomContainer from "../components/containerComponent.jsx";
 // CSS Style
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../assets/css/knockout.css";
 //JS
 import colors from "../assets/config/colors.js";
 // Assets
 import myPhoto from "../assets/img/MyPhoto.jpg";
+import backgroundPhoto from "../assets/img/VanDrivingMountainBackground.jpg";
+import knockoutBackground from "../assets/img/sky3.jpg";
 
-class CoverPhoto extends Component {}
+class KnockoutText extends Component {
+  render() {
+    const knockoutStyle = {};
+    return <img src={knockoutBackground} id="knockout-text" />;
+  }
+}
+
+class CoverPhoto extends Component {
+  render() {
+    const blurStyle = {
+      display: "block",
+      width: "110%",
+      height: "auto",
+      position: "absolute",
+      left: "-10px",
+      bottom: "-5px",
+      filter: "blur(5px)",
+      zIndex: "1",
+    };
+    const imgWrapperStyle = {
+      position: "relative",
+      width: "85%",
+      zIndex: "2",
+      margin: "auto",
+    };
+    const imgStyle = {
+      width: "100%",
+      height: "auto",
+    };
+    const overlayStyle = {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      backgroundColor: colors.primary,
+      opacity: "0.5",
+    };
+    return (
+      <CustomContainer>
+        <img src={backgroundPhoto} style={blurStyle} />
+        <div style={imgWrapperStyle}>
+          <div style={overlayStyle}></div>
+          <img src={backgroundPhoto} style={imgStyle} />
+          <KnockoutText style={{ position: "absolute" }} />
+        </div>
+      </CustomContainer>
+    );
+  }
+}
 
 class About extends Component {
   render() {
-    const containerStyle = {
-      overflow: "hidden",
-      height: "100vh",
-      width: "100vw",
-      position: "relative",
-      backgroundColor: colors.primary,
-    };
     const contentStyle = {
       display: "-ms-flexbox",
       display: "-webkit-flex",
@@ -35,9 +80,9 @@ class About extends Component {
       bottom: "0",
     };
     return (
-      <Row style={containerStyle}>
+      <CustomContainer backgroundColor={colors.primary}>
         <Col xs={6} style={contentStyle}>
-          <h1 style={{ paddingBottom: "1em" }}>About Me</h1>
+          <h1 style={{ paddingBottom: "1.5sem" }}>About Me</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
             feugiat mauris. Praesent non purus eget turpis lobortis egestas.
@@ -72,7 +117,7 @@ class About extends Component {
         <Col xs={6}>
           <img src={myPhoto} style={imgStyle} />
         </Col>
-      </Row>
+      </CustomContainer>
     );
   }
 }
@@ -80,6 +125,7 @@ class About extends Component {
 export default function HomePage() {
   return (
     <React.Fragment>
+      <CoverPhoto />
       <About />
     </React.Fragment>
   );
