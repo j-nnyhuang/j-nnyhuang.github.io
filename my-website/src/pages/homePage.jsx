@@ -22,6 +22,13 @@ class KnockoutText extends Component {
       zIndex: "2",
       overflow: "hidden",
     };
+    const textStyle = {
+      fontWeight: "bold",
+      color: "#fff",
+      margin: "50px 100px 50px 100px",
+      textAlign: "center",
+      fontSize: "300%",
+    };
     return (
       <div style={knockoutStyle}>
         <img
@@ -30,9 +37,13 @@ class KnockoutText extends Component {
           id="knockout-text"
           style={{
             width: "100%",
-            height: "auto",
+            height: "30%",
           }}
         ></img>
+        <h1 style={textStyle}>
+          Aspiring software developer interested in digital innovation and
+          travelling
+        </h1>
       </div>
     );
   }
@@ -65,7 +76,7 @@ class CoverPhoto extends Component {
       width: "100%",
       height: "100%",
       backgroundColor: colors.primary,
-      opacity: "0.5",
+      opacity: "0.6",
       zIndex: "2",
     };
     return (
