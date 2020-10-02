@@ -1,25 +1,14 @@
 /* Button Overlay Properties  */
-@import "../../config/_colors.scss";
+@import "../config/_colors.scss";
 
 .button-container {
-  position: relative;
-}
-
-.button-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.4s ease;
-  background-color: $primary;
-  border: 1px solid;
+  border: 1px solid $primary;
   border-radius: 5px;
+  color: $primary;
+  padding: 0.2em;
 }
 
-.button-container:hover .button-overlay {
-  opacity: 1;
+.button-container:hover {
+  background-color: $primary;
+  color: #ffffff;
 }

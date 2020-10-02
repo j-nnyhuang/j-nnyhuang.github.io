@@ -199,9 +199,12 @@ class Project extends Component {
             <p style={{ fontSize: "1vw", textAlign: "left" }}>
               {this.props.description}
             </p>
-            <CustomButton name="Learn More" color={colors.primary}>
-              Info
-            </CustomButton>
+            <CustomButton
+              name="Learn More"
+              color={colors.primary}
+              width="40%"
+              align="center"
+            />
           </div>
         </div>
       </Col>
