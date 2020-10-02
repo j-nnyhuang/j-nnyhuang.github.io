@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 //Custom Component
 import CustomContainer from "../components/containerComponent.jsx";
+import CustomButton from "../components/buttonComponent.jsx";
 // CSS Style
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../assets/css/knockout.css";
+import "../assets/scss/knockout.scss";
+import "../assets/scss/overlay.scss";
 //JS
 import colors from "../assets/config/colors.js";
 // Assets
@@ -24,7 +26,7 @@ class KnockoutText extends Component {
     };
     const textStyle = {
       fontWeight: "bold",
-      color: "#fff",
+      color: colors.tertiary,
       margin: "50px 100px 50px 100px",
       textAlign: "center",
       fontSize: "300%",
@@ -152,11 +154,115 @@ class About extends Component {
   }
 }
 
+class Project extends Component {
+  render() {
+    const squareStyle = {
+      textAlign: "center",
+      backgroundColor: colors.primary,
+      width: "21vw",
+      height: "21vw",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      margin: "2vw",
+    };
+    const lineStyle = {
+      backgroundColor: colors.secondary,
+      height: "2px",
+      width: "10%",
+      marginTop: "0",
+      maringBottom: "0",
+    };
+    const textStyle = {
+      padding: "1vw",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      height: "100%",
+    };
+    return (
+      <Col style={squareStyle} className="container">
+        <h2 style={{ fontSize: "6vw", color: colors.tertiary }}>
+          {this.props.name}
+        </h2>
+        <hr style={lineStyle} />
+        <p style={{ fontSize: "1.25vw", color: colors.secondary }}>
+          {this.props.oneLiner}
+        </p>
+
+        <div className="overlay">
+          <div style={textStyle}>
+            <h1 style={{ color: colors.primary, fontSize: "3.75vw" }}>
+              {this.props.name}
+            </h1>
+            <hr style={lineStyle} />
+            <p style={{ fontSize: "1vw", textAlign: "left" }}>
+              {this.props.description}
+            </p>
+            <CustomButton name="Learn More" color={colors.primary}>
+              Info
+            </CustomButton>
+          </div>
+        </div>
+      </Col>
+    );
+  }
+}
+
+class Projects extends Component {
+  render() {
+    const projectContainerStyle = {
+      alignItems: "center",
+      backgroundColor: colors.secondary,
+      minHeight: "100vh",
+      padding: "2.25vw",
+    };
+    return (
+      <Row style={projectContainerStyle}>
+        <Project
+          name="Haiven"
+          oneLiner="Artificial intelligence for intimate partner violence"
+          description="Haiven is a smartphone app designed to act as a friendly
+              neighbour. Using machine learning algorithms, the app will
+              automatically detect and classify audio information in order to
+              identify aggressive encounters. Like a friendly neighbour, the app
+              will check-in later in the day to assess the woman’s safety and
+              document the encounter. If the audio is extremely aggressive, an
+              emergency contact will be immediately notified."
+        />
+        <Project
+          name="Haiven"
+          oneLiner="Artificial intelligence for intimate partner violence"
+          description="Haiven is a smartphone app designed to act as a friendly
+              neighbour. Using machine learning algorithms, the app will
+              automatically detect and classify audio information in order to
+              identify aggressive encounters. Like a friendly neighbour, the app
+              will check-in later in the day to assess the woman’s safety and
+              document the encounter. If the audio is extremely aggressive, an
+              emergency contact will be immediately notified."
+        />
+        <Project
+          name="Haiven"
+          oneLiner="Artificial intelligence for intimate partner violence"
+          description="Haiven is a smartphone app designed to act as a friendly
+              neighbour. Using machine learning algorithms, the app will
+              automatically detect and classify audio information in order to
+              identify aggressive encounters. Like a friendly neighbour, the app
+              will check-in later in the day to assess the woman’s safety and
+              document the encounter. If the audio is extremely aggressive, an
+              emergency contact will be immediately notified."
+        />
+      </Row>
+    );
+  }
+}
+
 export default function HomePage() {
   return (
     <React.Fragment>
       <CoverPhoto />
       <About />
+      <Projects />
     </React.Fragment>
   );
 }
