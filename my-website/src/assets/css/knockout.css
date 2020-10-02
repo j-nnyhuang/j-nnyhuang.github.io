@@ -1,0 +1,4 @@
+#knockout-text {
+  mask: url(../svg/jenny.svg#mask);
+  -webkit-mask-image: url(../svg/jenny.svg);
+}

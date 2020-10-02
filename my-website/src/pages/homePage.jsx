@@ -11,12 +11,30 @@ import colors from "../assets/config/colors.js";
 // Assets
 import myPhoto from "../assets/img/MyPhoto.jpg";
 import backgroundPhoto from "../assets/img/VanDrivingMountainBackground.jpg";
-import knockoutBackground from "../assets/img/sky3.jpg";
+import knockoutBackground from "../assets/img/sky.jpg";
 
 class KnockoutText extends Component {
   render() {
-    const knockoutStyle = {};
-    return <img src={knockoutBackground} id="knockout-text" />;
+    const knockoutStyle = {
+      position: "absolute",
+      height: "100%",
+      width: "100%",
+      zIndex: "2",
+      overflow: "hidden",
+    };
+    return (
+      <div style={knockoutStyle}>
+        <img
+          src={knockoutBackground}
+          alt="Knockout"
+          id="knockout-text"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+        ></img>
+      </div>
+    );
   }
 }
 
@@ -30,17 +48,17 @@ class CoverPhoto extends Component {
       left: "-10px",
       bottom: "-5px",
       filter: "blur(5px)",
-      zIndex: "1",
+      zIndex: "-10",
     };
     const imgWrapperStyle = {
       position: "relative",
       width: "85%",
-      zIndex: "2",
       margin: "auto",
     };
     const imgStyle = {
       width: "100%",
       height: "auto",
+      zIndex: "1",
     };
     const overlayStyle = {
       position: "absolute",
@@ -48,14 +66,15 @@ class CoverPhoto extends Component {
       height: "100%",
       backgroundColor: colors.primary,
       opacity: "0.5",
+      zIndex: "2",
     };
     return (
       <CustomContainer>
         <img src={backgroundPhoto} style={blurStyle} />
         <div style={imgWrapperStyle}>
           <div style={overlayStyle}></div>
+          <KnockoutText />
           <img src={backgroundPhoto} style={imgStyle} />
-          <KnockoutText style={{ position: "absolute" }} />
         </div>
       </CustomContainer>
     );
