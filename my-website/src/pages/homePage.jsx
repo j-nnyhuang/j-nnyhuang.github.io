@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Modal, Button } from "react-bootstrap";
 
 //Custom Component
 import CustomContainer from "../components/containerComponent.jsx";
-import CustomButton from "../components/buttonComponent.jsx";
+import Project from "../components/projectComponent.jsx";
 // CSS Style
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/scss/knockout.scss";
-import "../assets/scss/overlay.scss";
 //JS
 import colors from "../assets/config/colors.js";
 // Assets
@@ -154,64 +153,6 @@ class About extends Component {
   }
 }
 
-class Project extends Component {
-  render() {
-    const squareStyle = {
-      textAlign: "center",
-      backgroundColor: colors.primary,
-      width: "21vw",
-      height: "21vw",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      margin: "2vw",
-    };
-    const lineStyle = {
-      backgroundColor: colors.secondary,
-      height: "2px",
-      width: "10%",
-      marginTop: "0",
-      maringBottom: "0",
-    };
-    const textStyle = {
-      padding: "1vw",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      height: "100%",
-    };
-    return (
-      <Col style={squareStyle} className="container">
-        <h2 style={{ fontSize: "6vw", color: colors.tertiary }}>
-          {this.props.name}
-        </h2>
-        <hr style={lineStyle} />
-        <p style={{ fontSize: "1.25vw", color: colors.secondary }}>
-          {this.props.oneLiner}
-        </p>
-
-        <div className="overlay">
-          <div style={textStyle}>
-            <h1 style={{ color: colors.primary, fontSize: "3.75vw" }}>
-              {this.props.name}
-            </h1>
-            <hr style={lineStyle} />
-            <p style={{ fontSize: "1vw", textAlign: "left" }}>
-              {this.props.description}
-            </p>
-            <CustomButton
-              name="Learn More"
-              color={colors.primary}
-              width="40%"
-              align="center"
-            />
-          </div>
-        </div>
-      </Col>
-    );
-  }
-}
-
 class Projects extends Component {
   render() {
     const projectContainerStyle = {
@@ -225,35 +166,75 @@ class Projects extends Component {
         <Project
           name="Haiven"
           oneLiner="Artificial intelligence for intimate partner violence"
-          description="Haiven is a smartphone app designed to act as a friendly
+          blurb="Haiven is a smartphone app designed to act as a friendly
               neighbour. Using machine learning algorithms, the app will
               automatically detect and classify audio information in order to
               identify aggressive encounters. Like a friendly neighbour, the app
               will check-in later in the day to assess the woman’s safety and
               document the encounter. If the audio is extremely aggressive, an
               emergency contact will be immediately notified."
+          description={[
+            "Haiven was conceptualized during the ",
+            <a href="https://www.ai4goodlab.com/">AI4Good Lab program</a>,
+            " This is a 7 week long program designed to introduce a cohort of 30 women across Canada to artificial intelligence. We were inspired to create a solution that tackled the rise in domestic violence cases during Covid 19 and the realities of women currently in ",
+            <a href="https://www.bbc.com/news/world-52063755">
+              abusive situations
+            </a>,
+            ". What started as a two week long project has now evolved into a (soon to be) non-profit organization. We are a small team who strive to create an application that can help and empower victims in violent situations.",
+          ]}
+          duration="July 2020 - Present"
+          myRole={[
+            <strong>Operations Lead</strong>,
+            <p>
+              Developed onboarding packages, reached out to potential sponsors
+              and assisted with recruiting.
+            </p>,
+            <strong>UX Designer</strong>,
+            <p>
+              Collaborated with one other member to design our application
+              interface on Figma and conducted user testing.
+            </p>,
+            <strong>Front End Developer</strong>,
+            <p>
+              I implemented all screens of our application in React Native
+              during our initial two week project phase. I am now in the process
+              of going back to review and improve all code and implement our new
+              UI updates.
+            </p>,
+          ]}
+          techStack="React, React Native, Figma"
         />
         <Project
-          name="Haiven"
-          oneLiner="Artificial intelligence for intimate partner violence"
-          description="Haiven is a smartphone app designed to act as a friendly
-              neighbour. Using machine learning algorithms, the app will
-              automatically detect and classify audio information in order to
-              identify aggressive encounters. Like a friendly neighbour, the app
-              will check-in later in the day to assess the woman’s safety and
-              document the encounter. If the audio is extremely aggressive, an
-              emergency contact will be immediately notified."
+          name="Unsupervised Clustering on Patient Data"
+          oneLiner="Unsupervised clustering"
+          blurb="Worked in collaboration with a doctor from Vancouver General Hospital and graduate students at the University of British Columbia to perform unsupervised clustering on patients who have heart failure with preserved ejection fraction."
+          description="Heart failure with preserved ejection fraction (HFpEF) is a type of heart disease that is difficult to find effective treatments for during large trials. The aim of this study was to cluster patients into subgroups, for future treatments, using a dataset containing 196 examples and 70 features in R."
+          duration="Jan 2020 - April 2020"
+          myRole={[
+            <strong>Data Analyst</strong>,
+            <p>
+              Performed feature selection, conducted exploratory data analysis,
+              performed clustering and analyzed clusters. Composed a 10 page
+              report to highlight findings.
+            </p>,
+          ]}
+          techStack="RStudio"
         />
         <Project
-          name="Haiven"
-          oneLiner="Artificial intelligence for intimate partner violence"
-          description="Haiven is a smartphone app designed to act as a friendly
-              neighbour. Using machine learning algorithms, the app will
-              automatically detect and classify audio information in order to
-              identify aggressive encounters. Like a friendly neighbour, the app
-              will check-in later in the day to assess the woman’s safety and
-              document the encounter. If the audio is extremely aggressive, an
-              emergency contact will be immediately notified."
+          name="Total Loss Damage Recognition"
+          oneLiner="Visual recognition for vehicle collisions"
+          blurb="In a team of four, developed an application that identifies the appropriate path for a vehicle after a collision to reduce costs incurred by the Insurance Corporation of British Columbia and improve customer experience."
+          description="Participated in a 3 day Hackathon, held jointly by the Insurance Corporation of British Columbia (ICBC) and IBM, that used IBM’s technology stack to tackle ICBC business problems. In a team of four, we developed an application that determines whether a car is a total loss after an accident. Users can upload images of their vehicle, and the application will notify them about whether their vehicle is salvageable. We presented our idea in front of a panel of ICBC executives and placed first for our pitch."
+          duration="November 2019"
+          myRole={[
+            <strong>Developer</strong>,
+            <p>
+              Developed a general framework of the application using Node.JS,
+              with complete user interface, which allows users to submit images
+              and determines whether a vehicle is total loss or not.
+            </p>,
+          ]}
+          techStack="Node.js, IBM Watson Visual Recognition"
         />
       </Row>
     );

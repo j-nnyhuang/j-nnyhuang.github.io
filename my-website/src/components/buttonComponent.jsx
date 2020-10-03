@@ -10,7 +10,11 @@ export default class CustomButton extends Component {
       alignSelf: this.props.align,
     };
     return (
-      <div className="button-container" style={size}>
+      <div
+        className="button-container"
+        style={size}
+        onClick={this.props.customClickEvent}
+      >
         {this.props.name}
       </div>
     );

@@ -13,15 +13,9 @@
   opacity: 0;
   transition: 0.4s ease;
   background-color: #ffffff;
+  padding: 5%;
 }
 
 .container:hover .overlay {
   opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 1vw;
-  position: absolute;
-  text-align: left;
 }
