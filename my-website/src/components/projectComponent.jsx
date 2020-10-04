@@ -44,22 +44,22 @@ export default class Project extends Component {
     return (
       <React.Fragment>
         <Col style={squareStyle} className="container">
-          <h2 style={{ fontSize: "300%", color: colors.tertiary }}>
+          <h2 style={{ fontSize: "2vw", color: colors.tertiary }}>
             {this.props.name}
           </h2>
           <hr style={lineStyle} />
-          <p style={{ fontSize: "150%", color: colors.secondary }}>
+          <p style={{ fontSize: "1.25vw", color: colors.secondary }}>
             {this.props.oneLiner}
           </p>
 
           {/* Overlay Content */}
           <div className="overlay">
             <div style={textStyle}>
-              <h1 style={{ color: colors.primary, fontSize: "200%" }}>
+              <h1 style={{ color: colors.primary, fontSize: "2vw" }}>
                 {this.props.name}
               </h1>
               <hr style={lineStyle} />
-              <p style={{ fontSize: "120%", textAlign: "left" }}>
+              <p style={{ fontSize: "1.25vw", textAlign: "left" }}>
                 {this.props.blurb}
               </p>
               <CustomButton
@@ -80,7 +80,7 @@ export default class Project extends Component {
         >
           <Modal.Header closeButton>
             <Modal.Title>
-              <h1>{this.props.name}</h1>
+              <h3>{this.props.name}</h3>
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>

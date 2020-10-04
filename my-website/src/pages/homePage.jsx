@@ -28,7 +28,7 @@ class KnockoutText extends Component {
       color: colors.tertiary,
       margin: "50px 100px 50px 100px",
       textAlign: "center",
-      fontSize: "300%",
+      fontSize: "2vw",
     };
     return (
       <div style={knockoutStyle}>
@@ -168,10 +168,7 @@ class Projects extends Component {
           oneLiner="Artificial intelligence for intimate partner violence"
           blurb="Haiven is a smartphone app designed to act as a friendly
               neighbour. Using machine learning algorithms, the app will
-              automatically detect and classify audio information in order to
-              identify aggressive encounters. Like a friendly neighbour, the app
-              will check-in later in the day to assess the woman’s safety and
-              document the encounter. If the audio is extremely aggressive, an
+              automatically detect and classify audio information to identify aggressive encounters. If the audio is extremely aggressive, an
               emergency contact will be immediately notified."
           description={[
             "Haiven was conceptualized during the ",
