@@ -114,7 +114,7 @@ class About extends Component {
     return (
       <CustomContainer backgroundColor={colors.primary}>
         <Col xs={6} style={contentStyle}>
-          <Header textColor={colors.tertiary} name="About" />
+          <Header textColor={colors.tertiary} name="About" id="about" />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
             feugiat mauris. Praesent non purus eget turpis lobortis egestas.
@@ -167,7 +167,7 @@ class Projects extends Component {
     };
     return (
       <div style={projectContainerStyle}>
-        <Header textColor={colors.primary} name="Projects" />
+        <Header textColor={colors.primary} name="Projects" id="projects" />
         <Row style={{ justifyContent: "space-between", width: "100%" }}>
           <Project
             name="Haiven"

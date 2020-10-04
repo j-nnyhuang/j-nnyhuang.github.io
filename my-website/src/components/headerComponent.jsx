@@ -7,6 +7,10 @@ export default class Header extends Component {
       paddingBottom: "5vh",
       textTransform: "uppercase",
     };
-    return <h1 style={headerStyle}>{this.props.name}</h1>;
+    return (
+      <h1 style={headerStyle} id={this.props.id}>
+        {this.props.name}
+      </h1>
+    );
   }
 }
