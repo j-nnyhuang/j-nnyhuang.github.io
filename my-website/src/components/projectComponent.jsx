@@ -20,12 +20,12 @@ export default class Project extends Component {
     const squareStyle = {
       textAlign: "center",
       backgroundColor: colors.primary,
-      width: "21vw",
-      height: "21vw",
+      width: "26vw",
+      height: "26vw",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      margin: "2vw",
+      margin: "1.85vw",
     };
     const lineStyle = {
       backgroundColor: colors.secondary,

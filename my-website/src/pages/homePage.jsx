@@ -4,6 +4,7 @@ import { Col, Row, Modal, Button } from "react-bootstrap";
 //Custom Component
 import CustomContainer from "../components/containerComponent.jsx";
 import Project from "../components/projectComponent.jsx";
+import Header from "../components/headerComponent.jsx";
 // CSS Style
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/scss/knockout.scss";
@@ -54,13 +55,13 @@ class CoverPhoto extends Component {
   render() {
     const blurStyle = {
       display: "block",
-      width: "110%",
       height: "auto",
       position: "absolute",
       left: "-10px",
       bottom: "-5px",
       filter: "blur(5px)",
       zIndex: "-10",
+      width: "120%",
     };
     const imgWrapperStyle = {
       position: "relative",
@@ -101,7 +102,7 @@ class About extends Component {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      padding: "10em",
+      padding: "3.2vw",
     };
     const imgStyle = {
       display: "block",
@@ -113,7 +114,7 @@ class About extends Component {
     return (
       <CustomContainer backgroundColor={colors.primary}>
         <Col xs={6} style={contentStyle}>
-          <h1 style={{ paddingBottom: "1.5sem" }}>About Me</h1>
+          <Header textColor={colors.tertiary} name="About" />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
             feugiat mauris. Praesent non purus eget turpis lobortis egestas.
@@ -156,84 +157,90 @@ class About extends Component {
 class Projects extends Component {
   render() {
     const projectContainerStyle = {
-      alignItems: "center",
       backgroundColor: colors.secondary,
       minHeight: "100vh",
-      padding: "2.25vw",
+      width: "100vw",
+      padding: "3.2vw",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
     };
     return (
-      <Row style={projectContainerStyle}>
-        <Project
-          name="Haiven"
-          oneLiner="Artificial intelligence for intimate partner violence"
-          blurb="Haiven is a smartphone app designed to act as a friendly
+      <div style={projectContainerStyle}>
+        <Header textColor={colors.primary} name="Projects" />
+        <Row style={{ justifyContent: "space-between", width: "100%" }}>
+          <Project
+            name="Haiven"
+            oneLiner="Artificial intelligence for intimate partner violence"
+            blurb="Haiven is a smartphone app designed to act as a friendly
               neighbour. Using machine learning algorithms, the app will
               automatically detect and classify audio information to identify aggressive encounters. If the audio is extremely aggressive, an
               emergency contact will be immediately notified."
-          description={[
-            "Haiven was conceptualized during the ",
-            <a href="https://www.ai4goodlab.com/">AI4Good Lab program</a>,
-            " This is a 7 week long program designed to introduce a cohort of 30 women across Canada to artificial intelligence. We were inspired to create a solution that tackled the rise in domestic violence cases during Covid 19 and the realities of women currently in ",
-            <a href="https://www.bbc.com/news/world-52063755">
-              abusive situations
-            </a>,
-            ". What started as a two week long project has now evolved into a (soon to be) non-profit organization. We are a small team who strive to create an application that can help and empower victims in violent situations.",
-          ]}
-          duration="July 2020 - Present"
-          myRole={[
-            <strong>Operations Lead</strong>,
-            <p>
-              Developed onboarding packages, reached out to potential sponsors
-              and assisted with recruiting.
-            </p>,
-            <strong>UX Designer</strong>,
-            <p>
-              Collaborated with one other member to design our application
-              interface on Figma and conducted user testing.
-            </p>,
-            <strong>Front End Developer</strong>,
-            <p>
-              I implemented all screens of our application in React Native
-              during our initial two week project phase. I am now in the process
-              of going back to review and improve all code and implement our new
-              UI updates.
-            </p>,
-          ]}
-          techStack="React, React Native, Figma"
-        />
-        <Project
-          name="Unsupervised Clustering on Patient Data"
-          oneLiner="Unsupervised clustering"
-          blurb="Worked in collaboration with a doctor from Vancouver General Hospital and graduate students at the University of British Columbia to perform unsupervised clustering on patients who have heart failure with preserved ejection fraction."
-          description="Heart failure with preserved ejection fraction (HFpEF) is a type of heart disease that is difficult to find effective treatments for during large trials. The aim of this study was to cluster patients into subgroups, for future treatments, using a dataset containing 196 examples and 70 features in R."
-          duration="Jan 2020 - April 2020"
-          myRole={[
-            <strong>Data Analyst</strong>,
-            <p>
-              Performed feature selection, conducted exploratory data analysis,
-              performed clustering and analyzed clusters. Composed a 10 page
-              report to highlight findings.
-            </p>,
-          ]}
-          techStack="RStudio"
-        />
-        <Project
-          name="Total Loss Damage Recognition"
-          oneLiner="Visual recognition for vehicle collisions"
-          blurb="In a team of four, developed an application that identifies the appropriate path for a vehicle after a collision to reduce costs incurred by the Insurance Corporation of British Columbia and improve customer experience."
-          description="Participated in a 3 day Hackathon, held jointly by the Insurance Corporation of British Columbia (ICBC) and IBM, that used IBM’s technology stack to tackle ICBC business problems. In a team of four, we developed an application that determines whether a car is a total loss after an accident. Users can upload images of their vehicle, and the application will notify them about whether their vehicle is salvageable. We presented our idea in front of a panel of ICBC executives and placed first for our pitch."
-          duration="November 2019"
-          myRole={[
-            <strong>Developer</strong>,
-            <p>
-              Developed a general framework of the application using Node.JS,
-              with complete user interface, which allows users to submit images
-              and determines whether a vehicle is total loss or not.
-            </p>,
-          ]}
-          techStack="Node.js, IBM Watson Visual Recognition"
-        />
-      </Row>
+            description={[
+              "Haiven was conceptualized during the ",
+              <a href="https://www.ai4goodlab.com/">AI4Good Lab program</a>,
+              " This is a 7 week long program designed to introduce a cohort of 30 women across Canada to artificial intelligence. We were inspired to create a solution that tackled the rise in domestic violence cases during Covid 19 and the realities of women currently in ",
+              <a href="https://www.bbc.com/news/world-52063755">
+                abusive situations
+              </a>,
+              ". What started as a two week long project has now evolved into a (soon to be) non-profit organization. We are a small team who strive to create an application that can help and empower victims in violent situations.",
+            ]}
+            duration="July 2020 - Present"
+            myRole={[
+              <strong>Operations Lead</strong>,
+              <p>
+                Developed onboarding packages, reached out to potential sponsors
+                and assisted with recruiting.
+              </p>,
+              <strong>UX Designer</strong>,
+              <p>
+                Collaborated with one other member to design our application
+                interface on Figma and conducted user testing.
+              </p>,
+              <strong>Front End Developer</strong>,
+              <p>
+                I implemented all screens of our application in React Native
+                during our initial two week project phase. I am now in the
+                process of going back to review and improve all code and
+                implement our new UI updates.
+              </p>,
+            ]}
+            techStack="React, React Native, Figma"
+          />
+          <Project
+            name="Unsupervised Clustering on Patient Data"
+            oneLiner="Unsupervised clustering"
+            blurb="Worked in collaboration with a doctor from Vancouver General Hospital and graduate students at the University of British Columbia to perform unsupervised clustering on patients who have heart failure with preserved ejection fraction."
+            description="Heart failure with preserved ejection fraction (HFpEF) is a type of heart disease that is difficult to find effective treatments for during large trials. The aim of this study was to cluster patients into subgroups, for future treatments, using a dataset containing 196 examples and 70 features in R."
+            duration="Jan 2020 - April 2020"
+            myRole={[
+              <strong>Data Analyst</strong>,
+              <p>
+                Performed feature selection, conducted exploratory data
+                analysis, performed clustering and analyzed clusters. Composed a
+                10 page report to highlight findings.
+              </p>,
+            ]}
+            techStack="RStudio"
+          />
+          <Project
+            name="Total Loss Damage Recognition"
+            oneLiner="Visual recognition for vehicle collisions"
+            blurb="In a team of four, developed an application that identifies the appropriate path for a vehicle after a collision to reduce costs incurred by the Insurance Corporation of British Columbia and improve customer experience."
+            description="Participated in a 3 day Hackathon, held jointly by the Insurance Corporation of British Columbia (ICBC) and IBM, that used IBM’s technology stack to tackle ICBC business problems. In a team of four, we developed an application that determines whether a car is a total loss after an accident. Users can upload images of their vehicle, and the application will notify them about whether their vehicle is salvageable. We presented our idea in front of a panel of ICBC executives and placed first for our pitch."
+            duration="November 2019"
+            myRole={[
+              <strong>Developer</strong>,
+              <p>
+                Developed a general framework of the application using Node.JS,
+                with complete user interface, which allows users to submit
+                images and determines whether a vehicle is total loss or not.
+              </p>,
+            ]}
+            techStack="Node.js, IBM Watson Visual Recognition"
+          />
+        </Row>
+      </div>
     );
   }
 }
