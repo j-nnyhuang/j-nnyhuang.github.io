@@ -16,7 +16,7 @@ import myPhoto from "../assets/img/MyPhoto.jpg";
 import backgroundPhoto from "../assets/img/VanDrivingMountainBackground.jpg";
 import knockoutBackground from "../assets/img/sky.jpg";
 
-class KnockoutText extends Component {
+class Text extends Component {
   render() {
     const knockoutStyle = {
       position: "absolute",
@@ -88,7 +88,7 @@ class CoverPhoto extends Component {
         <img src={backgroundPhoto} style={blurStyle} />
         <div style={imgWrapperStyle}>
           <div style={overlayStyle}></div>
-          <KnockoutText />
+          <Text />
           <img src={backgroundPhoto} style={imgStyle} />
         </div>
       </CustomContainer>
@@ -116,7 +116,11 @@ class About extends Component {
       objectFit: "cover",
     };
     return (
-      <CustomContainer backgroundColor={colors.primary}>
+      <CustomContainer
+        backgroundColor={colors.primary}
+        boxSizing="border-box"
+        border="1vw solid white"
+      >
         <Col xs={6} style={contentStyle}>
           <Header textColor={colors.tertiary} name="About" id="about" />
           <p>
@@ -164,10 +168,13 @@ class Projects extends Component {
       backgroundColor: colors.secondary,
       minHeight: "100vh",
       width: "100vw",
+      maxWidth: "100%",
       padding: "3.2vw",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
+      boxSizing: "borderBox",
+      border: "1vw solid white",
     };
     return (
       <div style={projectContainerStyle}>
@@ -176,8 +183,7 @@ class Projects extends Component {
           <Project
             name="Haiven"
             oneLiner="Artificial intelligence for intimate partner violence"
-            blurb="Haiven is a smartphone app designed to act as a friendly
-              neighbour. Using machine learning algorithms, the app will
+            blurb="Haiven is a smartphone app that uses machine learning algorithms to
               automatically detect and classify audio information to identify aggressive encounters. If the audio is extremely aggressive, an
               emergency contact will be immediately notified."
             description={[
