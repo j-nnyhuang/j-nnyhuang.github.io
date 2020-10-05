@@ -5,6 +5,7 @@ import { Col, Row, Modal, Button } from "react-bootstrap";
 import CustomContainer from "../components/containerComponent.jsx";
 import Project from "../components/projectComponent.jsx";
 import Header from "../components/headerComponent.jsx";
+import CustomNavbar from "../components/navbarComponent.jsx";
 // CSS Style
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/scss/knockout.scss";
@@ -274,9 +275,14 @@ class Projects extends Component {
 export default function HomePage() {
   return (
     <React.Fragment>
+      <CustomNavbar />
       <CoverPhoto />
-      <About />
-      <Projects />
+      <div id="about">
+        <About />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
     </React.Fragment>
   );
 }
