@@ -1,0 +1,14 @@
+/* Button Overlay Properties  */
+@import "../config/_colors.scss";
+
+.button-container {
+  border: 1px solid $primary;
+  border-radius: 5px;
+  color: $primary;
+  padding: 0.2em;
+}
+
+.button-container:hover {
+  background-color: $primary;
+  color: #ffffff;
+}
