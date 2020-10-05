@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // CSS Style
 import "../assets/scss/button.scss";
+import "../assets/scss/fonts.scss";
 
 export default class CustomButton extends Component {
   render() {

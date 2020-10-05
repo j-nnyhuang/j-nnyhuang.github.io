@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+//CSS Styles
+import "../assets/scss/fonts.scss";
+
 export default class Header extends Component {
   render() {
     const headerStyle = {

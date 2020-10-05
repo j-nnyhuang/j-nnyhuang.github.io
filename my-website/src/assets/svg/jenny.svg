@@ -1,16 +1,15 @@
-<svg width="70%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="90%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
 		<style>
 			text { 
 				font-size:120px;
-				font-family: Impact, Arial Black, sans-serif;
+				font-family: 'Francois One', 'Oswald', Arial Black, sans-serif;
                 font-weight: 900;
-                letter-spacing: 6px;
 				fill: white;
 			}
 		</style>
 		<mask id="mask" >
-			<text y="100%" x="50%" text-anchor="middle" id="knockout">JENNY</text>
+			<text y="90%" x="50%" text-anchor="middle" id="knockout">JENNY</text>
 		</mask>
 	</defs>
   <use xlink:href="#knockout"/>

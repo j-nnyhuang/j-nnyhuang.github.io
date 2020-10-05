@@ -8,6 +8,7 @@ import Header from "../components/headerComponent.jsx";
 // CSS Style
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/scss/knockout.scss";
+import "../assets/scss/fonts.scss";
 //JS
 import colors from "../assets/config/colors.js";
 // Assets
