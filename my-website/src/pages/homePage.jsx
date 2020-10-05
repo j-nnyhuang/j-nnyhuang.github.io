@@ -32,6 +32,7 @@ class Text extends Component {
       margin: "50px 100px 50px 100px",
       textAlign: "center",
       fontSize: "2vw",
+      margin: "1vw",
     };
     return (
       <div style={knockoutStyle}>
@@ -41,7 +42,7 @@ class Text extends Component {
           id="knockout-text"
           style={{
             width: "100%",
-            height: "30%",
+            height: "40%",
           }}
         ></img>
         <h1 style={textStyle}>

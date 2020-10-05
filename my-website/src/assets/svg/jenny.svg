@@ -9,7 +9,7 @@
 			}
 		</style>
 		<mask id="mask" >
-			<text y="90%" x="50%" text-anchor="middle" id="knockout">JENNY</text>
+			<text y="95%" x="50%" text-anchor="middle" id="knockout">JENNY</text>
 		</mask>
 	</defs>
   <use xlink:href="#knockout"/>
