@@ -188,9 +188,11 @@ class Projects extends Component {
               emergency contact will be immediately notified."
             description={[
               "Haiven was conceptualized during the ",
-              <a href="https://www.ai4goodlab.com/">AI4Good Lab program</a>,
+              <a href="https://www.ai4goodlab.com/" target="_blank">
+                AI4Good Lab program
+              </a>,
               " This is a 7 week long program designed to introduce a cohort of 30 women across Canada to artificial intelligence. We were inspired to create a solution that tackled the rise in domestic violence cases during Covid 19 and the realities of women currently in ",
-              <a href="https://www.bbc.com/news/world-52063755">
+              <a href="https://www.bbc.com/news/world-52063755" target="_blank">
                 abusive situations
               </a>,
               ". What started as a two week long project has now evolved into a (soon to be) non-profit organization. We are a small team who strive to create an application that can help and empower victims in violent situations.",
@@ -216,6 +218,11 @@ class Projects extends Component {
               </p>,
             ]}
             techStack="React, React Native, Figma"
+            links={[
+              <a href="https://github.com/myHaiven" target="_blank">
+                GitHub
+              </a>,
+            ]}
           />
           <Project
             name="Unsupervised Clustering on Patient Data"
@@ -232,6 +239,7 @@ class Projects extends Component {
               </p>,
             ]}
             techStack="RStudio"
+            links="Private Repository"
           />
           <Project
             name="Total Loss Damage Recognition"
@@ -248,6 +256,14 @@ class Projects extends Component {
               </p>,
             ]}
             techStack="Node.js, IBM Watson Visual Recognition"
+            links={[
+              <a
+                href="https://github.com/j-nnyhuang/totalLossEstimator"
+                target="_blank"
+              >
+                GitHub
+              </a>,
+            ]}
           />
         </Row>
       </div>

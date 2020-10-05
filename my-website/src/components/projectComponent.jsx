@@ -92,6 +92,8 @@ export default class Project extends Component {
             <p>{this.props.myRole}</p>
             <h5>TECHNOLOGY STACK</h5>
             <p>{this.props.techStack}</p>
+            <h5>LINKS</h5>
+            <p>{this.props.links}</p>
           </Modal.Body>
           <Modal.Footer>
             <Button
