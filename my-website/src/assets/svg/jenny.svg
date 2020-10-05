@@ -3,7 +3,7 @@
 		<style>
 			text { 
 				font-size:120px;
-				font-family: 'Francois One', 'Oswald', Arial Black, sans-serif;
+				font-family: 'Impact', 'Oswald', Arial Black, sans-serif;
                 font-weight: 900;
 				fill: white;
 			}

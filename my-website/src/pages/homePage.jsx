@@ -55,14 +55,14 @@ class KnockoutText extends Component {
 class CoverPhoto extends Component {
   render() {
     const blurStyle = {
-      display: "block",
-      height: "auto",
+      height: "110%",
+      width: "110%",
+      objectFit: "cover",
       position: "absolute",
       left: "-10px",
       bottom: "-5px",
       filter: "blur(5px)",
       zIndex: "-10",
-      width: "120%",
     };
     const imgWrapperStyle = {
       position: "relative",
@@ -71,7 +71,8 @@ class CoverPhoto extends Component {
     };
     const imgStyle = {
       width: "100%",
-      height: "auto",
+      height: "100%",
+      bottom: 0,
       zIndex: "1",
     };
     const overlayStyle = {
@@ -104,13 +105,15 @@ class About extends Component {
       flexDirection: "column",
       justifyContent: "center",
       padding: "3.2vw",
+      color: colors.tertiary,
     };
     const imgStyle = {
       display: "block",
       width: "100%",
-      height: "auto",
+      height: "100%",
       position: "absolute",
       bottom: "0",
+      objectFit: "cover",
     };
     return (
       <CustomContainer backgroundColor={colors.primary}>
