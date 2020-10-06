@@ -12,6 +12,7 @@ export default class CustomContainer extends Component {
       backgroundColor: this.props.backgroundColor,
       boxSizing: this.props.boxSizing,
       border: this.props.border,
+      flexDirection: this.props.flexDirection,
     };
     return <div style={containerStyle}>{this.props.children}</div>;
   }

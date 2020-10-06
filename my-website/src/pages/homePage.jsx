@@ -17,6 +17,8 @@ import myPhoto from "../assets/img/MyPhoto.jpg";
 import backgroundPhoto from "../assets/img/Vancouver5.jpg";
 import knockoutBackground from "../assets/img/sky.jpg";
 import HaivenMockup from "../assets/img/HaivenMockup-01.png";
+import TotalLossMockup from "../assets/img/TotalLossMockUp-01.png";
+import HeartFailureMockup from "../assets/img/HearFailureMockup-01.png";
 
 class Text extends Component {
   render() {
@@ -181,7 +183,14 @@ class Projects extends Component {
     };
     return (
       <div style={{ width: "100vw", maxWidth: "100%" }}>
-        <Header textColor={colors.primary} name="Projects" id="projects" />
+        <div
+          style={{
+            backgroundColor: colors.primary,
+            padding: "1.5vw 3vw 1.5vw 3vw",
+          }}
+        >
+          <h1 style={{ margin: "auto", color: colors.tertiary }}>PROJECTS</h1>
+        </div>
         <Project
           backgroundColor={colors.secondary}
           name="Haiven"
@@ -205,6 +214,34 @@ class Projects extends Component {
             <Role role="UI/UX Designer" backgroundColor={colors.primary} />,
           ]}
           image={HaivenMockup}
+          flexDirection="row-reverse"
+        />
+        <Project
+          backgroundColor={colors.secondary}
+          name="Total Loss Damage Recognition"
+          oneLiner="Visual recognition for vehicle collisions"
+          duration="November 2019"
+          description="Participated in a 3 day Hackathon, held jointly by the Insurance Corporation of British Columbia (ICBC) and IBM, that used IBM’s technology stack to tackle ICBC business problems. In a team of four, we developed an application that determines whether a car is a total loss after an accident. Users can upload images of their vehicle, and the application will notify them about whether their vehicle is salvageable. We presented our idea in front of a panel of ICBC executives and placed first for our pitch."
+          links={[
+            <Link
+              link="https://github.com/j-nnyhuang/totalLossEstimator"
+              linkName="GitHub"
+            />,
+          ]}
+          roles={[<Role role="Developer" backgroundColor={colors.primary} />]}
+          image={TotalLossMockup}
+        />
+        <Project
+          backgroundColor={colors.secondary}
+          name="Heart Failure with Preserved Ejection Fraction"
+          oneLiner="Unsupervised clustering on patient data"
+          duration="January - April 2020"
+          description="Worked in collaboration with a doctor from Vancouver General Hospital and graduate students at the University of British Columbia to perform unsupervised clustering on patients who have heart failure with preserved ejection fraction. The aim of this study was to cluster patients into subgroups, for future treatments, using a dataset containing 196 examples and 70 features in R."
+          roles={[
+            <Role role="Data Analyst" backgroundColor={colors.primary} />,
+          ]}
+          image={HeartFailureMockup}
+          flexDirection="row-reverse"
         />
       </div>
     );

@@ -270,7 +270,10 @@ export class Project extends Component {
       margin: "0 0 10px 0",
     };
     return (
-      <CustomContainer backgroundColor={this.props.backgroundColor}>
+      <CustomContainer
+        backgroundColor={this.props.backgroundColor}
+        flexDirection={this.props.flexDirection}
+      >
         <Col xs={6} style={contentStyle}>
           <h1 style={{ color: colors.primary }}>{this.props.name}</h1>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
