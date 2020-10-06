@@ -9,8 +9,6 @@ import "../assets/scss/overlay.scss";
 import "../assets/scss/project.scss";
 //JS
 import colors from "../assets/config/colors.js";
-// Images
-import HaivenMockup from "../assets/img/HaivenMockup-01.png";
 
 export class ProjectBoxView extends Component {
   state = {
@@ -247,14 +245,14 @@ export class Link extends Component {
       textDecoration: "none",
     };
     return (
-      <a href="" style={linkStyle}>
-        <p>GitHub</p>
+      <a href={this.props.link} target="_blank" style={linkStyle}>
+        <p>{this.props.linkName}</p>
       </a>
     );
   }
 }
 
-export default class Project extends Component {
+export class Project extends Component {
   render() {
     const contentStyle = {
       display: "-ms-flexbox",
@@ -272,23 +270,16 @@ export default class Project extends Component {
       margin: "0 0 10px 0",
     };
     return (
-      <CustomContainer backgroundColor={colors.secondary}>
+      <CustomContainer backgroundColor={this.props.backgroundColor}>
         <Col xs={6} style={contentStyle}>
-          <h1 style={{ color: colors.primary }}>Haiven</h1>
+          <h1 style={{ color: colors.primary }}>{this.props.name}</h1>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <h4>Artificial intelligence for intimate partner violence</h4>
-            <h4>July - Ongoing</h4>
+            <h4>{this.props.oneLiner}</h4>
+            <h4>{this.props.duration}</h4>
           </div>
           <hr style={lineStyle} />
 
-          <p>
-            Haiven is a smartphone app that uses machine learning algorithms to
-            automatically detect and classify audio information to identify
-            aggressive encounters. If the audio is extremely aggressive, an
-            emergency contact will be immediately notified. We are a small team
-            who strive to create an application that can help and empower
-            victims in violent situations.
-          </p>
+          <p>{this.props.description}</p>
           <div
             style={{
               display: "flex",
@@ -296,18 +287,16 @@ export default class Project extends Component {
               width: "fit-content",
             }}
           >
-            <Link />
-            <Link />
+            {this.props.links}
           </div>
 
-          <div style={{ display: "flex" }}>
-            <Role role="Front End Developer" backgroundColor={colors.primary} />
-            <Role role="Operations Lead" backgroundColor={colors.primary} />
-            <Role role="UI/UX Designer" backgroundColor={colors.primary} />
-          </div>
+          <div style={{ display: "flex" }}>{this.props.roles}</div>
         </Col>
         <Col xs={6} style={{ margin: "auto" }}>
-          <img src={HaivenMockup} style={{ width: "100%", height: "auto" }} />
+          <img
+            src={this.props.image}
+            style={{ width: "100%", height: "auto" }}
+          />
         </Col>
       </CustomContainer>
     );

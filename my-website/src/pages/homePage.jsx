@@ -3,7 +3,7 @@ import { Col, Row, Modal, Button } from "react-bootstrap";
 
 //Custom Component
 import CustomContainer from "../components/containerComponent.jsx";
-import Project from "../components/projectComponent.jsx";
+import { Project, Role, Link } from "../components/projectComponent.jsx";
 import Header from "../components/headerComponent.jsx";
 import CustomNavbar from "../components/navbarComponent.jsx";
 // CSS Style
@@ -16,6 +16,7 @@ import colors from "../assets/config/colors.js";
 import myPhoto from "../assets/img/MyPhoto.jpg";
 import backgroundPhoto from "../assets/img/Vancouver5.jpg";
 import knockoutBackground from "../assets/img/sky.jpg";
+import HaivenMockup from "../assets/img/HaivenMockup-01.png";
 
 class Text extends Component {
   render() {
@@ -181,7 +182,30 @@ class Projects extends Component {
     return (
       <div style={{ width: "100vw", maxWidth: "100%" }}>
         <Header textColor={colors.primary} name="Projects" id="projects" />
-        <Project />
+        <Project
+          backgroundColor={colors.secondary}
+          name="Haiven"
+          oneLiner="Artificial intelligence for intimate partner violence"
+          duration="July - Ongoing"
+          description="Haiven is a smartphone app that uses machine learning algorithms to
+            automatically detect and classify audio information to identify
+            aggressive encounters. If the audio is extremely aggressive, an
+            emergency contact will be immediately notified. We are a small team
+            who strive to create an application that can help and empower
+            victims in violent situations."
+          links={[
+            <Link link="https://github.com/myhaiven" linkName="GitHub" />,
+          ]}
+          roles={[
+            <Role
+              role="Front End Developer"
+              backgroundColor={colors.primary}
+            />,
+            <Role role="Operations Lead" backgroundColor={colors.primary} />,
+            <Role role="UI/UX Designer" backgroundColor={colors.primary} />,
+          ]}
+          image={HaivenMockup}
+        />
       </div>
     );
   }
