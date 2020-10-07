@@ -6,6 +6,7 @@ import CustomContainer from "../components/containerComponent.jsx";
 import { Project, Role, Link } from "../components/projectComponent.jsx";
 import Header from "../components/headerComponent.jsx";
 import CustomNavbar from "../components/navbarComponent.jsx";
+import Footer from "../components/footerComponent.jsx";
 // CSS Style
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/scss/knockout.scss";
@@ -236,7 +237,7 @@ class Projects extends Component {
           name="Heart Failure with Preserved Ejection Fraction"
           oneLiner="Unsupervised clustering on patient data"
           duration="January - April 2020"
-          description="Worked in collaboration with a doctor from Vancouver General Hospital and graduate students at the University of British Columbia to perform unsupervised clustering on patients who have heart failure with preserved ejection fraction. The aim of this study was to cluster patients into subgroups, for future treatments, using a dataset containing 196 examples and 70 features in R."
+          description="Worked in collaboration with a doctor from Vancouver General Hospital and graduate students at the University of British Columbia to perform unsupervised clustering on patients who have heart failure with preserved ejection fraction. The aim of this study was to cluster patients into subgroups for future treatments using a dataset containing 196 examples and 70 features in R."
           roles={[
             <Role role="Data Analyst" backgroundColor={colors.primary} />,
           ]}
@@ -259,6 +260,7 @@ export default function HomePage() {
       <div id="projects">
         <Projects />
       </div>
+      <Footer />
     </React.Fragment>
   );
 }
