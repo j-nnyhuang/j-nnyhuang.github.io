@@ -47,7 +47,15 @@ class Text extends Component {
             height: "40%",
           }}
         ></img> */}
-        <h1 style={{ fontSize: "15vw" }}>JENNY</h1>
+        <h1
+          style={{
+            fontSize: "24em",
+            textShadow:
+              "0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black",
+          }}
+        >
+          JENNY
+        </h1>
         <h1>Aspiring software developer interested in digital innovation.</h1>
       </div>
     );
@@ -83,7 +91,7 @@ class CoverPhoto extends Component {
       width: "100%",
       height: "100%",
       backgroundColor: colors.primary,
-      opacity: "0.6",
+      opacity: "0.1",
       zIndex: "2",
     };
     return (
