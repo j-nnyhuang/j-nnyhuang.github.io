@@ -23,23 +23,22 @@ import HeartFailureMockup from "../assets/img/HearFailureMockup-01.png";
 
 class Text extends Component {
   render() {
-    const knockoutStyle = {
+    const textStyle = {
       position: "absolute",
       height: "100%",
       width: "100%",
       zIndex: "2",
       overflow: "hidden",
-    };
-    const textStyle = {
+      textAlign: "center",
       fontWeight: "bold",
       color: colors.tertiary,
-      textAlign: "center",
-      fontSize: "2vw",
-      margin: "1vw",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
     };
     return (
-      <div style={knockoutStyle}>
-        <img
+      <div style={textStyle}>
+        {/* <img
           src={knockoutBackground}
           alt="Knockout"
           id="knockout-text"
@@ -47,11 +46,9 @@ class Text extends Component {
             width: "100%",
             height: "40%",
           }}
-        ></img>
-        <h1 style={textStyle}>
-          Aspiring software developer interested in digital innovation and
-          travelling
-        </h1>
+        ></img> */}
+        <h1 style={{ fontSize: "15vw" }}>JENNY</h1>
+        <h1>Aspiring software developer interested in digital innovation.</h1>
       </div>
     );
   }
@@ -59,24 +56,25 @@ class Text extends Component {
 
 class CoverPhoto extends Component {
   render() {
-    const blurStyle = {
-      height: "110%",
-      width: "110%",
-      objectFit: "cover",
-      position: "absolute",
-      left: "-10px",
-      bottom: "-5px",
-      filter: "blur(5px)",
-      zIndex: "-10",
-    };
-    const imgWrapperStyle = {
-      position: "relative",
-      width: "85%",
-      margin: "auto",
-    };
+    // const blurStyle = {
+    //   height: "110%",
+    //   width: "110%",
+    //   objectFit: "cover",
+    //   position: "absolute",
+    //   left: "-10px",
+    //   bottom: "-5px",
+    //   filter: "blur(5px)",
+    //   zIndex: "-10",
+    // };
+    // const imgWrapperStyle = {
+    //   position: "relative",
+    //   width: "100%",
+    //   margin: "auto",
+    // };
     const imgStyle = {
       width: "100%",
       height: "100%",
+      objectFit: "cover",
       bottom: 0,
       zIndex: "1",
     };
@@ -90,8 +88,8 @@ class CoverPhoto extends Component {
     };
     return (
       <CustomContainer>
-        <img src={backgroundPhoto} style={blurStyle} />
-        <div style={imgWrapperStyle}>
+        {/* <img src={backgroundPhoto} style={blurStyle} /> */}
+        <div /*style={imgWrapperStyle}*/>
           <div style={overlayStyle}></div>
           <Text />
           <img src={backgroundPhoto} style={imgStyle} />
