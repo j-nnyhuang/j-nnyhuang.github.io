@@ -15,7 +15,7 @@ import "../assets/scss/fonts.scss";
 import colors from "../assets/config/colors.js";
 // Assets
 import myPhoto from "../assets/img/MyPhoto.jpg";
-import backgroundPhoto from "../assets/img/Vancouver5.jpg";
+import backgroundPhoto from "../assets/img/lightbulb.jpg";
 import knockoutBackground from "../assets/img/sky.jpg";
 import HaivenMockup from "../assets/img/HaivenMockup-01.png";
 import TotalLossMockup from "../assets/img/TotalLossMockUp-01.png";
