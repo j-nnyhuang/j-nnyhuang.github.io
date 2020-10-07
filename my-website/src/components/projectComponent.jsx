@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Row, Modal, Button } from "react-bootstrap";
+import { Col, Modal, Button } from "react-bootstrap";
 
 // Custom Components
 import CustomButton from "../components/buttonComponent.jsx";
@@ -245,7 +245,12 @@ export class Link extends Component {
       textDecoration: "none",
     };
     return (
-      <a href={this.props.link} target="_blank" style={linkStyle}>
+      <a
+        href={this.props.link}
+        target="_blank"
+        style={linkStyle}
+        rel="noopener noreferrer"
+      >
         <p>{this.props.linkName}</p>
       </a>
     );

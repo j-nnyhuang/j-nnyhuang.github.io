@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Row, Modal, Button } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
 //Custom Component
 import CustomContainer from "../components/containerComponent.jsx";
@@ -33,7 +33,6 @@ class Text extends Component {
     const textStyle = {
       fontWeight: "bold",
       color: colors.tertiary,
-      margin: "50px 100px 50px 100px",
       textAlign: "center",
       fontSize: "2vw",
       margin: "1vw",
