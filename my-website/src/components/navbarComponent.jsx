@@ -1,44 +1,48 @@
 import React, { Component } from "react";
-
+import { Nav, Navbar } from "react-bootstrap";
 // CSS Style
 import "bootstrap/dist/css/bootstrap.min.css";
 //JS
 import colors from "../assets/config/colors.js";
 
-export default class CustomNavbar extends Component {
+export default class MyNavbar extends Component {
+  state = {};
   render() {
-    const navbarStyle = {
-      display: "flex",
-      flexDirection: "row",
-      position: "absolute",
-      zIndex: "1000",
-      padding: "2vw",
-      justifyContent: "space-between",
-      width: "100%",
-      color: colors.tertiary,
-    };
-    const linkStyle = {
-      color: colors.tertiary,
-      textDecoration: "none",
-    };
     return (
-      <div style={navbarStyle}>
-        <h2>JENNY HUANG</h2>
-        <div
+      <React.Fragment>
+        <Navbar
+          justify="true"
           style={{
-            display: "flex",
-            width: "20%",
-            justifyContent: "space-around",
+            backgroundColor: colors.primary,
+            padding: 20,
+            borderRadius: "0",
+            margin: 0,
+            width: "100vw",
           }}
+          expand="sm"
         >
-          <a href="#about" style={linkStyle}>
-            <h2>ABOUT</h2>
-          </a>
-          <a href="#projects" style={linkStyle}>
-            <h2>PROJECTS</h2>
-          </a>
-        </div>
-      </div>
+          <Navbar.Brand href="#home" style={{ display: "flex" }}>
+            <h1 style={{ color: colors.white, margin: "auto" }}>JENNY</h1>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav
+              className="ml-auto"
+              style={{
+                backgroundColor: colors.white,
+                padding: 10,
+                borderRadius: 5,
+                width: "21%",
+                justifyContent: "space-between",
+              }}
+            >
+              <Nav.Link href="#about">ABOUT</Nav.Link>
+              <Nav.Link href="#projects">PROJECTS</Nav.Link>
+              <Nav.Link href="#contact">CONTACT</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </React.Fragment>
     );
   }
 }

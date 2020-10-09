@@ -5,7 +5,7 @@ import { Col } from "react-bootstrap";
 import CustomContainer from "../components/containerComponent.jsx";
 import { Project, Role, Link } from "../components/projectComponent.jsx";
 import Header from "../components/headerComponent.jsx";
-import CustomNavbar from "../components/navbarComponent.jsx";
+import MyNavbar from "../components/navbarComponent.jsx";
 import Footer from "../components/footerComponent.jsx";
 // CSS Style
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,7 +15,7 @@ import "../assets/scss/fonts.scss";
 import colors from "../assets/config/colors.js";
 // Assets
 import myPhoto from "../assets/img/MyPhoto.jpg";
-import backgroundPhoto from "../assets/img/lightbulb.jpg";
+import backgroundPhoto from "../assets/img/Vancouver5.jpg";
 import knockoutBackground from "../assets/img/sky.jpg";
 import HaivenMockup from "../assets/img/HaivenMockup-01.png";
 import TotalLossMockup from "../assets/img/TotalLossMockUp-01.png";
@@ -49,12 +49,12 @@ class Text extends Component {
         ></img> */}
         <h1
           style={{
-            fontSize: "24em",
+            fontSize: "10vw",
             textShadow:
               "0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black",
           }}
         >
-          JENNY
+          JENNY HUANG
         </h1>
         <h1>Aspiring software developer interested in digital innovation.</h1>
       </div>
@@ -62,23 +62,23 @@ class Text extends Component {
   }
 }
 
+class ParralaxImage extends Component {
+  render() {
+    const parralax = {
+      backgroundImage: backgroundPhoto,
+      height: "100vh",
+      /* Create the parallax scrolling effect */
+      backgroundAttachment: "fixed",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+    };
+    return <div style={parralax}></div>;
+  }
+}
+
 class CoverPhoto extends Component {
   render() {
-    // const blurStyle = {
-    //   height: "110%",
-    //   width: "110%",
-    //   objectFit: "cover",
-    //   position: "absolute",
-    //   left: "-10px",
-    //   bottom: "-5px",
-    //   filter: "blur(5px)",
-    //   zIndex: "-10",
-    // };
-    // const imgWrapperStyle = {
-    //   position: "relative",
-    //   width: "100%",
-    //   margin: "auto",
-    // };
     const imgStyle = {
       width: "100%",
       height: "100%",
@@ -91,16 +91,16 @@ class CoverPhoto extends Component {
       width: "100%",
       height: "100%",
       backgroundColor: colors.primary,
-      opacity: "0.1",
+      opacity: "0.5",
       zIndex: "2",
     };
     return (
       <CustomContainer>
-        {/* <img src={backgroundPhoto} style={blurStyle} /> */}
-        <div /*style={imgWrapperStyle}*/>
+        <div>
           <div style={overlayStyle}></div>
           <Text />
           <img src={backgroundPhoto} style={imgStyle} />
+          {/* <ParralaxImage /> */}
         </div>
       </CustomContainer>
     );
@@ -175,18 +175,6 @@ class About extends Component {
 
 class Projects extends Component {
   render() {
-    const projectContainerStyle = {
-      backgroundColor: colors.secondary,
-      minHeight: "100vh",
-      width: "100vw",
-      maxWidth: "100%",
-      padding: "3.2vw",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      boxSizing: "borderBox",
-      border: "1vw solid white",
-    };
     return (
       <div style={{ width: "100vw", maxWidth: "100%" }}>
         <div
@@ -227,7 +215,7 @@ class Projects extends Component {
           name="Total Loss Damage Recognition"
           oneLiner="Visual recognition for vehicle collisions"
           duration="November 2019"
-          description="Participated in a 3 day Hackathon, held jointly by the Insurance Corporation of British Columbia (ICBC) and IBM, that used IBM’s technology stack to tackle ICBC business problems. In a team of four, we developed an application that determines whether a car is a total loss after an accident. Users can upload images of their vehicle, and the application will notify them about whether their vehicle is salvageable. We presented our idea in front of a panel of ICBC executives and placed first for our pitch."
+          description="Competed in a 3 day Hackathon, held jointly by the Insurance Corporation of British Columbia (ICBC) and IBM, that used IBM’s technology stack to tackle ICBC business problems. In a team of four, we developed an application that determines whether a car is a total loss after an accident. Users can upload images of their vehicle, and the application will notify them about whether their vehicle is salvageable. We presented our idea in front of a panel of ICBC executives and placed first for our pitch."
           links={[
             <Link
               link="https://github.com/j-nnyhuang/totalLossEstimator"
@@ -257,7 +245,7 @@ class Projects extends Component {
 export default function HomePage() {
   return (
     <React.Fragment>
-      <CustomNavbar />
+      <MyNavbar />
       <CoverPhoto />
       <div id="about">
         <About />
