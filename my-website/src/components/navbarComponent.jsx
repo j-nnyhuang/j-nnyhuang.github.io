@@ -14,10 +14,12 @@ export default class MyNavbar extends Component {
           justify="true"
           style={{
             backgroundColor: colors.primary,
+            position: "absolute",
             padding: 20,
             borderRadius: "0",
             margin: 0,
             width: "100vw",
+            zIndex: 1000,
           }}
           expand="sm"
         >

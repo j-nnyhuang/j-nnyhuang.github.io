@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col } from "react-bootstrap";
+import { Parallax, Background } from "react-parallax";
 
 //Custom Component
 import CustomContainer from "../components/containerComponent.jsx";
@@ -16,7 +17,6 @@ import colors from "../assets/config/colors.js";
 // Assets
 import myPhoto from "../assets/img/MyPhoto.jpg";
 import backgroundPhoto from "../assets/img/Vancouver5.jpg";
-import knockoutBackground from "../assets/img/sky.jpg";
 import HaivenMockup from "../assets/img/HaivenMockup-01.png";
 import TotalLossMockup from "../assets/img/TotalLossMockUp-01.png";
 import HeartFailureMockup from "../assets/img/HearFailureMockup-01.png";
@@ -27,7 +27,7 @@ class Text extends Component {
       position: "absolute",
       height: "100%",
       width: "100%",
-      zIndex: "2",
+      zIndex: "500",
       overflow: "hidden",
       textAlign: "center",
       fontWeight: "bold",
@@ -38,15 +38,6 @@ class Text extends Component {
     };
     return (
       <div style={textStyle}>
-        {/* <img
-          src={knockoutBackground}
-          alt="Knockout"
-          id="knockout-text"
-          style={{
-            width: "100%",
-            height: "40%",
-          }}
-        ></img> */}
         <h1
           style={{
             fontSize: "10vw",
@@ -59,21 +50,6 @@ class Text extends Component {
         <h1>Aspiring software developer interested in digital innovation.</h1>
       </div>
     );
-  }
-}
-
-class ParralaxImage extends Component {
-  render() {
-    const parralax = {
-      backgroundImage: backgroundPhoto,
-      height: "100vh",
-      /* Create the parallax scrolling effect */
-      backgroundAttachment: "fixed",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-    };
-    return <div style={parralax}></div>;
   }
 }
 
@@ -95,14 +71,17 @@ class CoverPhoto extends Component {
       zIndex: "2",
     };
     return (
-      <CustomContainer>
-        <div>
+      /* <div>
           <div style={overlayStyle}></div>
           <Text />
           <img src={backgroundPhoto} style={imgStyle} />
-          {/* <ParralaxImage /> */}
+        </div> */
+      <Parallax bgImage={backgroundPhoto} strength={500}>
+        <div style={{ height: "100vh", width: "100vw" }}>
+          <div style={overlayStyle}></div>
+          <Text />
         </div>
-      </CustomContainer>
+      </Parallax>
     );
   }
 }
