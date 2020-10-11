@@ -1,32 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.5d7c2b43.chunk.css",
-    "main.js": "/static/js/main.d9ee6086.chunk.js",
-    "main.js.map": "/static/js/main.d9ee6086.chunk.js.map",
+    "main.css": "/static/css/main.0b71ede1.chunk.css",
+    "main.js": "/static/js/main.0329b322.chunk.js",
+    "main.js.map": "/static/js/main.0329b322.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9b126251.js",
     "runtime-main.js.map": "/static/js/runtime-main.9b126251.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.023d13d6.chunk.js": "/static/js/2.023d13d6.chunk.js",
-    "static/js/2.023d13d6.chunk.js.map": "/static/js/2.023d13d6.chunk.js.map",
+    "static/js/2.3b43b766.chunk.js": "/static/js/2.3b43b766.chunk.js",
+    "static/js/2.3b43b766.chunk.js.map": "/static/js/2.3b43b766.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8548f98b26f5461db917b6f26ca59f8b.js": "/precache-manifest.8548f98b26f5461db917b6f26ca59f8b.js",
+    "precache-manifest.e4b53c2f393ba49bbee0ccac2f0c9fdc.js": "/precache-manifest.e4b53c2f393ba49bbee0ccac2f0c9fdc.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.5d7c2b43.chunk.css.map": "/static/css/main.5d7c2b43.chunk.css.map",
-    "static/js/2.023d13d6.chunk.js.LICENSE.txt": "/static/js/2.023d13d6.chunk.js.LICENSE.txt",
+    "static/css/main.0b71ede1.chunk.css.map": "/static/css/main.0b71ede1.chunk.css.map",
+    "static/js/2.3b43b766.chunk.js.LICENSE.txt": "/static/js/2.3b43b766.chunk.js.LICENSE.txt",
     "static/media/HaivenMockup-01.png": "/static/media/HaivenMockup-01.185a6f17.png",
     "static/media/HearFailureMockup-01.png": "/static/media/HearFailureMockup-01.29a15253.png",
     "static/media/MyPhoto.jpg": "/static/media/MyPhoto.14e70be8.jpg",
     "static/media/TotalLossMockUp-01.png": "/static/media/TotalLossMockUp-01.790598cb.png",
-    "static/media/knockout.scss": "/static/media/jenny.4e81b9ee.svg",
-    "static/media/lightbulb.jpg": "/static/media/lightbulb.ebb4aff3.jpg",
-    "static/media/sky.jpg": "/static/media/sky.4a6c3b95.jpg"
+    "static/media/Vancouver5.jpg": "/static/media/Vancouver5.b9f22454.jpg",
+    "static/media/knockout.scss": "/static/media/jenny.4e81b9ee.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.9b126251.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.023d13d6.chunk.js",
-    "static/css/main.5d7c2b43.chunk.css",
-    "static/js/main.d9ee6086.chunk.js"
+    "static/js/2.3b43b766.chunk.js",
+    "static/css/main.0b71ede1.chunk.css",
+    "static/js/main.0329b322.chunk.js"
   ]
 }
