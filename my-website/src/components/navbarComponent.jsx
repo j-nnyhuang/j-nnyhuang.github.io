@@ -15,16 +15,17 @@ export default class MyNavbar extends Component {
           style={{
             backgroundColor: colors.primary,
             position: "absolute",
-            padding: 20,
+            padding: 10,
             borderRadius: "0",
             margin: 0,
             width: "100vw",
             zIndex: 1000,
+            maxWidth: "100%",
           }}
           expand="sm"
         >
           <Navbar.Brand href="#home" style={{ display: "flex" }}>
-            <h1 style={{ color: colors.white, margin: "auto" }}>JENNY</h1>
+            <h1 style={{ color: colors.white, margin: "auto" }}>JH</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -32,9 +33,9 @@ export default class MyNavbar extends Component {
               className="ml-auto"
               style={{
                 backgroundColor: colors.white,
-                padding: 10,
+                padding: 8,
                 borderRadius: 5,
-                width: "21%",
+                width: "fit-content",
                 justifyContent: "space-between",
               }}
             >

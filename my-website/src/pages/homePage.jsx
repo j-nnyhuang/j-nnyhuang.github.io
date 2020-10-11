@@ -45,7 +45,7 @@ class Text extends Component {
               "0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black",
           }}
         >
-          JENNY HUANG
+          Jenny<span style={{ fontSize: "6vw" }}>.</span>
         </h1>
         <h1>Aspiring software developer interested in digital innovation.</h1>
       </div>
