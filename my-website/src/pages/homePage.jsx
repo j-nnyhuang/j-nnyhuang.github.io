@@ -120,13 +120,7 @@ class About extends Component {
             consequat ipsum nec, egestas mi. Etiam maximus risus quam, vitae
             accumsan ante venenatis id. Morbi vehicula faucibus turpis, id
             hendrerit est mollis sed. Aliquam eu felis at purus rhoncus
-            efficitur. Proin tempus efficitur quam, non luctus tortor vehicula
-            sit amet. Ut vitae fringilla augue. Praesent porttitor ex vitae est
-            lobortis maximus. Maecenas et laoreet ante, sed varius dui. Donec
-            eleifend metus urna, at cursus sapien tincidunt vitae. Mauris
-            faucibus pharetra sapien vel egestas. Nunc est arcu, commodo sed
-            porta vitae, consectetur at dolor. Nulla nec arcu ultrices, vehicula
-            ante eu, lobortis arcu. <br />
+            efficitur. <br />
             <br />
             Aliquam metus nibh, pellentesque volutpat odio ac, varius
             ullamcorper magna. In elementum, ante eget tristique commodo, leo
@@ -136,12 +130,7 @@ class About extends Component {
             convallis efficitur, eros turpis condimentum urna, sed convallis
             turpis sapien accumsan dui. Nullam at dapibus nulla. Sed tempus odio
             ac fringilla consequat. Nullam sollicitudin ligula fringilla tellus
-            interdum pulvinar. Maecenas at bibendum velit. Fusce tortor neque,
-            porta sed volutpat vel, blandit ut magna. Pellentesque scelerisque
-            quis velit vel imperdiet. Pellentesque ullamcorper, velit et rutrum
-            tristique, turpis odio aliquam dolor, at viverra elit enim at augue.
-            Proin vel malesuada nibh. Quisque aliquam aliquet euismod. Praesent
-            pretium varius lorem eget posuere.
+            interdum pulvinar.
           </p>
         </Col>
         <Col xs={6}>
@@ -232,7 +221,7 @@ export default function HomePage() {
       <div id="projects">
         <Projects />
       </div>
-      <Footer />
+      <Footer id="contact" />
     </React.Fragment>
   );
 }
